@@ -40,6 +40,7 @@ jobs:
       run: |
         cd result
         yarn --frozen-lockfile
+        cd ..
         yarn nx build api-flowaccount-workshop
         docker build -t $ECR_URI:$IMAGE_TAG .
         docker push $ECR_URI:$IMAGE_TAG
