@@ -3,8 +3,8 @@ name: Build and Push Docker Image to ECR
 on:
   push:
     branches:
-      - main # or specify any branch you want to trigger this workflow on
-      # - example/pipeline
+      #- main # or specify any branch you want to trigger this workflow on
+      - example/pipeline
       #test
 
 jobs:
