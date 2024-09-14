@@ -38,6 +38,7 @@ jobs:
         ECR_URI: "772482925850.dkr.ecr.us-east-1.amazonaws.com/web-app"
         IMAGE_TAG: ${{ github.sha }}
       run: |
+        cd /home/runner/work/example-voting-app/example-voting-app
         yarn --frozen-lockfile
         yarn nx build api-flowaccount-workshop
         docker build -t $ECR_URI:$IMAGE_TAG .
