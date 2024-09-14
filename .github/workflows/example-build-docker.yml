@@ -36,16 +36,11 @@ jobs:
     - name: Build, tag, and push Docker image
       env:
         ECR_URI: "772482925850.dkr.ecr.us-east-1.amazonaws.com/web-app"
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: latest
       run: |
         cd result
         docker build -t $ECR_URI:$IMAGE_TAG .
         docker push $ECR_URI:$IMAGE_TAG
-      # run: |
-      #   npm ci
-      #   npx nx build api-flowaccount-workshop
-      #   docker build -t $ECR_URI:$IMAGE_TAG .
-      #   docker push $ECR_URI:$IMAGE_TAG
 
     # - name: Image digest
     #   run: |
