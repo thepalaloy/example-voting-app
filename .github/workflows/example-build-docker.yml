@@ -5,7 +5,7 @@ on:
     branches:
       - main # or specify any branch you want to trigger this workflow on
       # - example/pipeline
-      #test
+      # test
 
 jobs:
   build-and-push:
